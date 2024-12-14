@@ -4,36 +4,41 @@
 This project implements an **Arithmetic Unit** capable of performing the following calculation:
 
 
-
 - **A** and **B** are 8-bit unsigned inputs.
 - **P** is a 16-bit unsigned output.
 
-The design includes internal registers for inputs and output, status signals, and an active-low reset functionality. It has been modeled using **structural VHDL**, with a focus on modularity, synthesis, and simulation.
+The design includes:
+- Internal registers for input and output storage.
+- A **status signal** to indicate when the calculation is complete.
+- An **active-low reset** to reset all registers and outputs to 0.
+
+This project has been developed using **structural VHDL**, with an emphasis on modularity, synthesis, and simulation.
 
 ---
 
 ## Features
-1. **Structural VHDL Design**: The circuit is implemented with clearly defined structural components for easy synthesis and simulation.
-2. **Multiplier Choice**: The design incorporates a carefully chosen multiplier (e.g., Array Multiplier or Booth Multiplier) for efficient computation.
-3. **Testbench**: Comprehensive testbench included to validate all functionality and edge cases.
-4. **Generic Design**: Supports simulation and synthesis for variable input sizes.
-5. **Enhanced Functionality**: The unit is capable of extended operations such as:
-   - Handling signed inputs (A, B, and P).
-   - Using additional 8-bit inputs (C and D) to compute:
+1. **Structural VHDL Design**: Modular and clear architecture for synthesis and simulation.
+2. **Multiplier Choice**: Utilized an efficient multiplier (e.g., Array or Booth) with justified selection.
+3. **Comprehensive Testbench**: Validates functionality and edge cases.
+4. **Generic Design**: Extensible to support varying input sizes.
+5. **Enhanced Functionality**:
+   - **Signed Arithmetic**: Supports signed inputs (A, B, and P).
+   - **Additional Inputs**: Extended formula:
      ```
      P = (A * B) / (2 * C) + D
      ```
-6. **Serial I/O**: Reduces the I/O count with serial inputs and outputs, incorporating control signals.
-7. **Optimized Performance**: Designed to minimize FPGA resource utilization while maintaining speed.
+     where **C** and **D** are 8-bit unsigned inputs.
+6. **Serial I/O**: Reduces I/O count with added control signals.
+7. **Optimized Performance**: Balanced FPGA resource utilization and speed.
 
 ---
 
 ## Getting Started
+
 ### Prerequisites
-- **ModelSim**: For simulation and testing.
-- **FPGA Board**: Optional, for hardware implementation.
-- **VHDL Knowledge**: Basic understanding of VHDL for reviewing or modifying the design.
+To use or simulate the Arithmetic Unit, ensure you have the following:
+- **ModelSim** or equivalent VHDL simulator for testing.
+- **FPGA Development Environment** (e.g., Quartus, Vivado) for synthesis and hardware implementation.
+- Basic knowledge of **VHDL** for any modifications.
 
 ### File Structure
-
-
