@@ -1,8 +1,39 @@
-{\rtf1\ansi\ansicpg1252\cocoartf2580
-\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
-{\colortbl;\red255\green255\blue255;}
-{\*\expandedcolortbl;;}
-\margl1440\margr1440\vieww11520\viewh8400\viewkind0
-\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+# Arithmetic Unit Design in Structural VHDL
 
-\f0\fs24 \cf0 This is the main project which correctly calculates P =A*B/2^C + D . There are 2 test benches, one checks the overall functionality of the system which other focus on the status signals (clk,reset, load and status) to ensure they are working as required.}
+## Project Overview
+This project implements an **Arithmetic Unit** capable of performing the following calculation:
+
+
+
+- **A** and **B** are 8-bit unsigned inputs.
+- **P** is a 16-bit unsigned output.
+
+The design includes internal registers for inputs and output, status signals, and an active-low reset functionality. It has been modeled using **structural VHDL**, with a focus on modularity, synthesis, and simulation.
+
+---
+
+## Features
+1. **Structural VHDL Design**: The circuit is implemented with clearly defined structural components for easy synthesis and simulation.
+2. **Multiplier Choice**: The design incorporates a carefully chosen multiplier (e.g., Array Multiplier or Booth Multiplier) for efficient computation.
+3. **Testbench**: Comprehensive testbench included to validate all functionality and edge cases.
+4. **Generic Design**: Supports simulation and synthesis for variable input sizes.
+5. **Enhanced Functionality**: The unit is capable of extended operations such as:
+   - Handling signed inputs (A, B, and P).
+   - Using additional 8-bit inputs (C and D) to compute:
+     ```
+     P = (A * B) / (2 * C) + D
+     ```
+6. **Serial I/O**: Reduces the I/O count with serial inputs and outputs, incorporating control signals.
+7. **Optimized Performance**: Designed to minimize FPGA resource utilization while maintaining speed.
+
+---
+
+## Getting Started
+### Prerequisites
+- **ModelSim**: For simulation and testing.
+- **FPGA Board**: Optional, for hardware implementation.
+- **VHDL Knowledge**: Basic understanding of VHDL for reviewing or modifying the design.
+
+### File Structure
+
+
