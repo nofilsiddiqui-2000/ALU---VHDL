@@ -1,7 +1,7 @@
 ## Arithmetic Unit Design in Structural VHDL  
 
-Project Overview  
-This project implements an advanced Arithmetic Unit capable of performing the following calculation:  
+**Project Overview**
+- This project implements an advanced Arithmetic Unit capable of performing the following calculation:  
 
 P = (A * B) / (2^C) + D  
 
@@ -34,7 +34,7 @@ Features
 
 Performance Metrics  
 
-- Dynamic Division**: Handles variable exponentiation (`2^C`) efficiently.  
+- Dynamic Division: Handles variable exponentiation (`2^C`) efficiently.  
 - Resource Utilization**: Optimized for minimal FPGA resource usage while meeting high-speed requirements.  
 - Extensibility**: Modular design allows future enhancements and scalability.  
 
